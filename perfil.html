@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="cargarDatosUsuario()">
+    <h1>Usuario</h1>
+
+    <button type="button" onclick="cerrarSesion()">Cerrar sesión</button>
+    <button type="button" onclick="irAlPerfil()">Ir a Mi Perfil</button>
+
+
+    <form>
+        <div class="form-group">
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" required>
+        </div>
+
+        <div class="form-group">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" required>
+        </div>
+
+        <div class="form-group">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" required>
+        </div>
+
+        <div class="form-group">
+            <label for="claveActual">Clave actual (para cambios):</label>
+            <input type="password" id="claveActual">
+        </div>
+
+        <div class="form-group">
+            <label for="claveNueva">Nueva contraseña (opcional):</label>
+            <input type="password" id="claveNueva">
+        </div>
+
+        <div class="form-group">
+            <label for="confirmarClaveNueva">Confirmar nueva contraseña:</label>
+            <input type="password" id="confirmarClaveNueva">
+        </div>
+
+        <button type="button" onclick="actualizarPerfil()">Actualizar</button>
+        <button type="button" onclick="window.location.href='inicio.html'">Volver</button>
+    </form>
+
+    <div id="mensaje" class="error"></div>
+
+    <script src="JS/scripts.js"></script>
+</body>
+</html>

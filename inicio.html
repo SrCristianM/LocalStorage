@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body onload="mostrarTareas()">
+  <button onclick="cerrarSesion()">Cerrar Sesión</button>
+  <button type="button" onclick="irAlPerfil()">Ir a Mi Perfil</button>
+
+
+  <form onsubmit="guardarTarea(); return false;">
+    <h3>Agregar Tarea</h3>
+    <input type="text" id="nuevaTarea" placeholder="Escribe una tarea" required>
+    <button type="submit">Agregar</button>
+  </form>
+
+  <table>
+    <tr>
+      <th>Tarea</th>
+      <th>Editar</th>
+      <th>Eliminar</th>
+    </tr>
+    <tbody id="listaTareas"></tbody>
+  </table>
+
+  <div id="editarModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <h2>Editar Tarea</h2>
+      <input type="text" id="tareaEditada" style="width: 90%; padding: 4px; margin-bottom: 10px;">
+      <button onclick="guardarEdicion()">Guardar Cambios</button>
+    </div>
+  </div>
+
+  <script src="JS/scripts.js"></script>
+</body>
